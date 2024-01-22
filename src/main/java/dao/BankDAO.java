@@ -50,7 +50,7 @@ public class BankDAO {
     public int updateByNumber(int balance, int number){
         Connection conn = DBConnection.getInstance();
         try {
-            String sql = "update account_tb set balance = ? where number = ?)";
+            String sql = "update account_tb set balance = ? where number = ?";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setInt(1, balance);
             pstmt.setInt(2, number);
